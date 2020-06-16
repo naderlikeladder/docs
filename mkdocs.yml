@@ -1,0 +1,18 @@
+site_name: Shortstack Docs
+nav:
+  - Home: index.md
+  # - About: index.md
+theme: readthedocs
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Deploy Docs
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy MkDocs
+      uses: mhausenblas/mkdocs-deploy-gh-pages@1.12
+      
